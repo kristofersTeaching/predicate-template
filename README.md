@@ -2,13 +2,14 @@
 
 This is the first python programming hand-in in the course where you will learn some basics in python programming practices, like using virtual environment and tests, as well as how to create data structures to be able to compute some simple search algorithms. The main components are state, predicates, actions, transitions and graphs.
 
-The hand-in is divided into five tasks:
+The hand-in is divided into six tasks:
 
 - state
 - guards
 - actions
 - transition
 - graph
+- Planning
 
 You will solve each task by implementing code so that the included tests passes. Continuously you will also push your code to github and your repository, where it will be tested automatically.
 
@@ -229,7 +230,7 @@ A transition consists of a guard and a list of actions. To be able to use the tr
 
 And commit and push your progress as always
 
-No we are at the final task, which is the most fun and interesting part. The previsou tasks was just to build the components that we will use to build graphs. 
+No we are at the first task where we finally will implement some algorithms The previous tasks was just to build the components that we will use to build graphs. 
 
 The tests are in graphs/tests/test_graph.py and the files where you will implement are graphs/factory.py and graphs/graph.py.
 
@@ -245,12 +246,22 @@ The factory method could be implemented using recursion or a while loop and a st
 
 When implementing this method, it could be useful to run the tests in debug mode. In for example the factory.py, add a pause sign by clicking to the left of the line number so a red dot appears. No right-click on the small circle to the left of the test test_make_me_a_graph() and select debug test. Now the code will stop executing at the pause sign and you can execute line by line and also see what the variables currently are.
 
-In the graph.py, I have already created a class for  Edge and one class for Vertex. Use the from_state methods when creating these so that the names will be the same as in my tests.
+In the graph.py, I have already created a class for Edge and one class for Vertex. Use the from_state methods when creating these so that the names will be the same as in my tests.
 
 The rest of the tests checks that you have implemented all the methods in the graph class. Check the tests and the descriptions in the class.
 
+The things you have learned in this task have prepared you for the next task where you will implement a simple search algorithms.
+
+## Task 6
+
+To make a system behave in an intelligent way, we would like it to figure out what sequence of transitions it must execute to reach a goal. In this final task,you wil implement a planning algorithm that can find the shortest path from an initial state to a state where a goal predicate is true. You do not need to first create a graph but can search directly using states and transitions. 
+
+The test file is located in planning/planner.py and the tests are in planning/tests/test_planning.py.
+
+The final planning algorithm will be similar to the graph_factory but requirers some more work to keep track of the path as well as checking for the goal.
+
+```python
+def plan(initial_state: State, transitions: List[Transition], goal: Guard) -> Optional[List[str]]:
+```
+
 When you are done with this task, all tests should pass and you can commit and push the final solution to github! 
-
-The things you have learned in this assignment will be reused in the next assignment where you will implement simple search algorithms in a graph-like structure. This will we then use to find a plan for two robots to sort cubes.
-
-

@@ -1,4 +1,4 @@
-# EEN150 Intelligent Automation: The predicate hand-in
+# SSY066 Intelligent Automation: The predicate hand-in
 
 This is the first python programming hand-in in the course where you will learn some basics in python programming practices, like using virtual environment and tests, as well as how to create data structures to be able to compute some simple search algorithms. The main components are state, predicates, actions, transitions and graphs.
 
